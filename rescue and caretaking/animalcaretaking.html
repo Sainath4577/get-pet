@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="animalrescue.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <section>
+        <div class="container">
+          <form action="https://formspree.io/f/xzbobraa" method="POST" id="my-form">
+      
+            <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+          </div>
+
+          <div class="form-group">
+              <label for="contact no">Contact No</label>
+              <input type="text" id="contact No" name="Contact">
+            </div>
+      
+            <div class="form-group">
+              <label for="cats">caretaking cost per cat</label>
+              <select id="cats">
+                <option value="Select No Of Days"></option>
+                <option value="Cat">1 day - 300Rs</option>
+                <option value="Cat">2 day - 600Rs </option>
+                <option value="Cat">3 day - 900Rs </option>
+                <option value="cat">4 day - 1200Rs </option>
+                <option value="cat">5 day - 1500Rs </option>
+                <option value="cat">6 day - 1800Rs </option>
+                <option value="cat">7 day - 2100Rs </option>
+                <option value="Cat">8 day - 2400Rs</option>
+                <option value="Cat">9 day - 2700Rs</option>
+                <option value="Cat">10 day - 3000Rs</option>
+                <option value="Cat">11 day - 3300Rs</option>
+                <option value="Cat">12 day - 3600Rs</option>
+                <option value="Cat">13 day - 3900Rs</option>
+                <option value="Cat">14 day - 4200Rs</option>
+                <option value="Cat">15 day - 4500Rs</option>
+              </select>
+            </div>
+      
+            <div class="form-group">
+              <label for="dogs">caretaking cost per dog</label>
+             <select id="dogs">
+                <option value="Select No Of Days"></option>
+                <option value="dogs">1 day - 300Rs</option>
+                <option value="dog">2 day - 600Rs </option>
+                <option value="dog">3 day - 900Rs </option>
+                <option value="dog">4 day - 1200Rs </option>
+                <option value="dog">5 day - 1500Rs </option>
+                <option value="dog">6 day - 1800Rs </option>
+                <option value="dog">7 day - 2100Rs </option>
+                <option value="dog">8 day - 2400Rs</option>
+                <option value="dog">9 day - 2700Rs</option>
+                <option value="dog">10 day - 3000Rs</option>
+                <option value="dog">11 day - 3300Rs</option>
+                <option value="dog">12 day - 3600Rs</option>
+                <option value="dog">13 day - 3900Rs</option>
+                <option value="dog">14 day - 4200Rs</option>
+                <option value="dog">15 day - 4500Rs</option>
+             </select>
+            </div>
+
+            <div class="form-group">
+              <label for="Email">Email</label>
+              <input type="text" id="Email" name="Email">
+            </div>
+
+            
+      
+            <button type="proceed">Proceed</button>
+          </form>
+        </div>
+        <div id="status"></div>
+      </section>   
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+      // get the form elements defined in your form HTML above
+    
+      var form = document.getElementById("my-form");
+      // var button = document.getElementById("my-form-button");
+      var status = document.getElementById("status");
+    
+      // Success and Error functions for after the form is submitted
+    
+      function success() {
+        form.reset();
+        status.classList.add("success");
+        status.innerHTML = "Thanks! We Will Do The Needful";
+      }
+    
+      function error() {
+        status.classList.add("error");
+        status.innerHTML = "Oops! There was a problem.";
+      }
+    
+      // handle the form submission event
+    
+      form.addEventListener("Proceed", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+      });
+    });
+    
+    // helper function for sending an AJAX request
+    
+    function ajax(method, url, data, success, error) {
+      var xhr = new XMLHttpRequest();
+      xhr.open(method, url);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+          success(xhr.response, xhr.responseType);
+        } else {
+          error(xhr.status, xhr.response, xhr.responseType);
+        }
+      };
+      xhr.send(data);
+    }
+    
+  </script>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///C:/Users/Sainath%20Reddy/Downloads/Get_Pet.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get_Pet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Get_Pet_files/css2" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Get_Pet_files/css2(1)" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Get_Pet_files/css2(2)" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Asap', sans-serif;
+
+
+            font-size: 25px;
+        }
+
+        .head {
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgb(212, 79, 79, 0.7), rgb(78, 107, 204, 0.7)), url("https://c4.wallpaperflare.com/wallpaper/265/877/311/movie-the-secret-life-of-pets-2-hd-wallpaper-preview.jpg");
+            background-position: center;
+            position: relative;
+            background-size: cover;
+
+        }
+
+        .fent {
+            font-family: 'Cookie', cursive;
+            color: rgb(236, 223, 228);
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .info img {
+            border-radius: 50%;
+            width: 90%;
+            object-fit: cover;
+
+        }
+
+        .info img:hover {
+            transform: scale(1.05);
+            z-index: 2;
+        }
+
+        .info table tr td {
+            font-family: 'Shadows Into Light', cursive;
+            font-size: 30px;
+            text-align: left;
+            align-items: center;
+            font-weight: 700;
+        }
+
+        .fant {
+            font-family: 'Shadows Into Light', cursive;
+            color: rgb(253, 198, 210);
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            border: 1px solid #fff;
+            color: #fff;
+            font-size: 20px;
+            padding: 10px 20px;
+            position: relative;
+            cursor: pointer;
+
+            margin-bottom: 2%;
+
+
+        }
+
+        nav {
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img {
+            width: 150px;
+            float: left;
+        }
+
+        .nav-l {
+            flex: 1;
+            text-align: right;
+
+        }
+
+        img {
+            object-fit: cover;
+        }
+
+        .info h1 {
+
+            color: black;
+            font-size: 60px;
+            font-family: 'Cookie', cursive;
+            text-align: center;
+
+
+
+        }
+
+        body {
+            background: linear-gradient(rgb(78, 107, 204, 0.5), rgb(212, 79, 79, 0.5));
+            color: black;
+            font-size: 20px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .btn:hover {
+            border: 1px solid #f44336;
+            background: #f44336;
+            transition: 1s;
+        }
+
+        .nav-l ul li {
+            list-style: none;
+            display: inline-block;
+            position: relative;
+            padding: 8px 12px;
+        }
+
+        .nav-l ul li a {
+            color: whitesmoke;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .pic {
+            border-radius: 50%;
+            float: left;
+            margin-right: 20px;
+            margin-left: 30px;
+        }
+
+        .nav-l ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #fbff04;
+            display: block;
+            margin: auto;
+            transition: 0.8s;
+        }
+
+        .nav-l ul li:hover::after {
+            width: 100%;
+
+        }
+
+        .info {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .text-box {
+            text-align: center;
+            color: #fff;
+        }
+
+        .text-box p {
+            margin: 10px 0 40px;
+        }
+
+
+
+        .serv {
+            text-align: center;
+            font-size: 60px;
+            font-family: 'Cookie', cursive;
+        }
+
+        .row {
+            width: 80%;
+            margin: auto;
+            padding: 50px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .int {
+            font-size: 40px;
+            text-align: left;
+            font-family: 'Cookie', cursive;
+            margin-left: 30px;
+
+        }
+
+        .col {
+            flex-basis: 32%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+
+        .col img {
+
+            display: block;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .layer {
+
+            background: transparent;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        .layer:hover {
+            background: rgb(224, 48, 48, 0.7);
+
+        }
+
+        .layer h3 {
+            width: 100%;
+            font-weight: 500;
+            color: white;
+            font-size: 26px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .layer:hover h3 {
+            bottom: 49%;
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="head">
+        <nav>
+            <a href="#"> <img width="50px" src="./Get_Pet_files/pets-2975623-2470952.png" alt="Get_Pet"></a>
+            <h1 class="fant">Get_Pet</h1>
+
+
+            <div class="nav-l">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li><a href="./Get_Pet_files/service.html">Services</a></li>
+                    <li></li>
+                    <li><a href="./Get_Pet.html#contact">Contact us</a></li>
+    <li>Login</li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div class="text-box">
+            <br>
+            <br>
+
+            <h1 class="fent">
+                LOVE<br> is a Four-Legged word
+            </h1>
+
+            <p1>
+                Pets are a great blessing in anyone’s life. They are the only ones who love us unconditionally. Pets
+                always
+                offer us everything they have without asking for anything in return. The main aim of any pet’s life is
+                to
+                make their owner happy. Nowadays, even the term ‘owner’ is changing. People prefer their pets as kids
+                and to
+                themselves as parents. This is how the relationship between pets is evolving. People treat them no less
+                than
+                humans. For instance, they celebrate their birthdays; get those matching outfits and more.
+            </p1><br><br>
+            <p2>A Dog is a Person’s Best Friend There are thousands of animals of all shapes, sizes, and colors. Some
+                can be
+                easily domesticated and are friendly; while others are naturally wild and savage. There are thousands of
+                people, around the world, who have different animals as pets. Typical pets consist of cats, dogs, fish,
+                turtles, or hamsters. However, the best pet a person can have is a dog. Dogs are the best pets because
+                they
+                are friendly, are intelligent, and can protect/detect dangers. The scientific name for dogs is Canis
+                lupus
+                familiaris, and “there are more than 150 dog breeds divided into eight classes: sporting, hound,
+                working,
+                terrier, toy, non-sporting, herding, and miscellaneous.” </p2>
+
+
+
+        </div>
+    </section>
+
+    <section>
+        <div class="info">
+            <h1>Some popular Dog breeds</h1>
+            <table cellpadding="4" cellspacing="0" border="0" align="center" width="100%">
+                <tbody><tr>
+                    <td width="16%">
+                        Labrador Retriever<br>
+                        <a href="https://en.wikipedia.org/wiki/Labrador_Retriever"> <img src="./Get_Pet_files/1280px-Labrador_Retriever_(1210559).jpg" width="100%" height="100%" alt="Labrador Retriever"></a>
+                    </td>
+                    <td width="16%">
+                        Golden Retriever <br><a href="https://en.wikipedia.org/wiki/Golden_Retriever"><img src="./Get_Pet_files/picture-of-golden-retriever-dog_0.jpg" width="100%" height="100%" alt="Golden Retriever"></a>
+
+                    </td>
+                    <td width="16%">
+                        German Shepherd<br><a href="https://en.wikipedia.org/wiki/German_Shepherd"><img src="./Get_Pet_files/German_Shepherd_-_DSC_0346_(10096362833).jpg" width="100%" height="100%" alt="German Shepherd"></a>
+                    </td>
+                    <td width="16%">
+                        Bulldog<br> <a href="https://en.wikipedia.org/wiki/Bulldog"><img src="./Get_Pet_files/Bulldog_adult_male.jpg" width="100%" height="100%" alt="Bulldog"></a>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="16%">
+                        Beagle<br><a href="https://en.wikipedia.org/wiki/Beagle"><img src="./Get_Pet_files/Beagle_600.jpg" width="100%" alt="Beagle">
+                        </a>
+                    </td>
+                    <td width="16%">
+                        Poodle<br><a href="https://en.wikipedia.org/wiki/Poodle"><img src="./Get_Pet_files/1280px-Full_attention_(8067543690).jpg" width="100%" alt=" Poodle"></a>
+                    </td>
+
+                    <td width="16%">
+                        Rottweiler<br><a href="https://en.wikipedia.org/wiki/Rottweiler"><img src="./Get_Pet_files/rottweiler-868607572.jpg" width="100%" height="100%" alt="Rottweiler"></a>
+                    </td>
+                    <td width="16%">
+                        Border Collie<br><a href="https://en.wikipedia.org/wiki/Border_Collie"><img src="./Get_Pet_files/1280px-Border_collie_different_eyes_dog.jpg" width="100%" height="100%" alt="Border Collie"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="16%">
+                        Dobermann <br><a href="https://en.wikipedia.org/wiki/Dobermann"> <img src="./Get_Pet_files/1280px-Dobermann_handling.jpg" width="100%" height="100%" alt="Dobermann"></a>
+
+                    </td>
+                    <td width="16%">Pug<br>
+                        <a href="https://en.wikipedia.org/wiki/Pug"><img src="./Get_Pet_files/Mops_oct09_cropped2.jpg" width="100%" height="100%" alt="Pug"></a>
+
+                    </td>
+                    <td width="16%">
+                        Pomeranian<br><a href="https://en.wikipedia.org/wiki/Pomeranian_dog"><img src="./Get_Pet_files/Pomeranian.JPG" width="100%" height="100%" alt="Pomeranian">
+                        </a>
+                    </td>
+                    <td width="16%">
+                        Dalmatian<br> <a href="https://en.wikipedia.org/wiki/Dalmatian_(dog)"><img src="./Get_Pet_files/Dalmatiner_2.jpg" width="100%" height="100%"> </a>
+                </td></tr>
+            </tbody></table>Click here to<br>
+            Download Full Info.<br><br>
+            <a href="https://www.dogdoors.com/wp-content/uploads/2017/10/Dog-breed-book-low-resolution.pdf" class="btn"><br>
+                Download </a>
+        </div>
+    </section>
+    <!-- <marquee direction="right" scrollamount="13" width="100%">
+                                                        <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/9596bd166c14cb25f24fcaa78827d534-1583178440/dog-walk-transparent-gif-animation/instagram-logo-animation-gif-video.gif"
+                                                            width="10%">
+                                                    </marquee> -->
+    
+
+
+    </section>
+    <section class="int">
+        <h3 class="int">
+            Some interesting facts
+        </h3>
+
+        <br>
+        <br>
+        <table cellpadding="20" cellspacing="5" border="0" align="center" width="100%">
+            <tbody><tr>
+                <td>
+                    <marquee direction="up">
+                        <ul>
+                            <li>Dogs have a sense of time. It's been proven that they know the difference between an
+                                hour
+                                and five. If conditioned to, they can predict future events, such as regular walk time.
+                            </li>
+                            <li> Your dog is as smart as a two-year-old! Ever wonder why children around this age seem
+                                to have a
+                                special bond with the family dog? It could be because they speak the same language,
+                                roughly 250
+                                words, and gestures in fact.
+                            </li>
+                            <li>
+                                A study at UCSD claims that your dog can genuinely get jealous when they see you display
+                                affection for another creature.</li>
+                            <li>
+                                The United States has the highest pet dog population in the world. Approximately 75.8
+                                million in
+                                fact.</li>
+                            <li> Seeing eye dogs are trained to do their “business” on command. This way their owner can
+                                clean it
+                                up a bit easier. Some of the popular commands are “get busy” and “go time."
+
+
+                            </li>
+                            <li> Man’s best friend? Petting a dog and gazing into their eyes releases oxytocin (i.e the
+                                “love
+                                hormone”) not only for you but for them as well.
+
+                            </li>
+                            <li>
+                                The Saluki is the world’s oldest dog breed. They appear in ancient Egyptian tombs dating
+                                back to
+                                2100 B.C.
+                            </li>
+                            <li> Dachshunds were originally bred to fight badgers.</li>
+                            <li> Dogs that have been spayed or neutered live longer than dogs who are intact.</li>
+                            <li> More than half of all U.S presidents have owned dogs.
+                            </li>
+                            <li> Stray dogs in Russia have learned how to ride the complex subway system and get off at
+                                specific
+                                stops in search of food.
+
+                            </li>
+                            <li>
+                                Your dog can smell your feelings. In fact, your dog’s sense of smell is approximately
+                                100,000
+                                times better than yours. So it shouldn’t be shocking that they can, in fact, smell
+                                things such
+                                as fear. When a human is fearful, they perspire, and a dog is easily able to pick up on
+                                this
+                                change.
+
+                            </li>
+
+                        </ul>
+
+
+                    </marquee>
+
+                </td>
+                <td width="30%">
+                    <p>
+                        The friendship between dogs and man goes back to thousands of years. They were originally bred
+                        from wolves. They have separated themselves from wild wolves and they are adopted by humans.
+                        They are such a wonderful companion as we all know that sometimes they can be a better friend
+                        than a human. They are the real heroes and life-savers. A dog is someone who can be described as
+                        fearless, forgiving and capable of pure love.</p>
+                    <iframe width="560" height="315" src="./Get_Pet_files/CyZnVPYBDcw.html" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+
+                    <p>
+
+                        We have made attachments with our friends, families but those same attachments or we can say
+                        feelings we have for a human can build with an animal like a dog. There is no human on the earth
+                        is as loyal as a dog. Why do we like to have a dog as a pet? They are as cute as anything, isn’t
+                        it? But once you adopt them they became your family member and a friend.
+                    </p>
+
+
+
+
+
+                </td>
+
+            </tr>
+        </tbody></table>
+
+
+
+    </section>
+   
+
+
+
+</body></html>
